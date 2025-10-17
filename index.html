@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar header">
+            <div class="logo">
+                <span class="logo icon">TM</span>
+                <span class="logo text">Taskmanager</span>
+            </div>
+            <button class="toggle button" onclick="toggle menu()">☰</button>
+        </div>
+        <div class="sidebar content" id="sidebar menu">
+            <div class="section">
+                <h3>Taskmanager</h3>
+                <p>Organize your work and life,finally.</p>
+            </div>
+            <div class="section">
+                <h3>Features</h3>
+                <ul>
+                    <li>Task Management</li>
+                    <li>Team Collaboration</li><li>Analytics</li>
+                    <li>Integrations</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3>Resoutces</h3>
+                <ul>
+                    <li>Documentation</li>
+                    <li>Tutorials</li>
+                    <li>API References</li>
+                    <li>Support</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3>Company</h3>
+                <ul>
+                    <li>About us</li>
+                    <li>Careers</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms of service</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script>
+        function toggle menu(){
+            const menu=document.getElementById("sidebar menu");
+            menu.classList.toggle("open");
+        }
+    </script>
+    
+</body>
+</html>
