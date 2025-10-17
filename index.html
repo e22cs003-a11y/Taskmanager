@@ -3,57 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task manager</title>
+    <title>TaskManager</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="sidebar">
-        <div class="sidebar header">
-            <div class="logo">
-                <span class="logo icon">TM</span>
-                <span class="logo text">Taskmanager</span>
-            </div>
-            <button class="toggle button" onclick="toggle menu()">☰</button>
+    <header>
+        <div class="logo"><span>TM</span> Task Manager</div>
+        <nav>
+            <a href="#" class="active">Dashboard</a>
+            <a href="#">Tasks</a>
+            <a href="#">Profile</a>
+        </nav>
+    </header>
+    <section class="Dashboard">
+        <div class="create task">
+            <h2>Create New Task</h2>
+            <form>
+                <label>Task Name*</label>
+                <input type="text" placeholder="Task Name" required>
+
+                <label>Assignee email*</label>
+                <input type="email" placeholder="Assignee Email" required>
+
+                <laabel>Due Date</laabel>
+                <input type="time">
+
+                <label>Priority Level*</label>
+                <select>
+                    <option>Low Priority</option>
+                    <option>Medium Priority</option>
+                    <option>High Priority</option>
+                </select>
+                <label>Estimated hours</label>
+                <input type="number" placeholder="e.g:16">
+                <label>Project url</label>
+                <input type="url" placeholder="https://project-link.com">
+                <label>Task Description</label>
+                <textarea rows="3" placeholder="Summarize the task"></textarea>
+                <div class="Task progress">
+                    <label>Task Progress</label>
+                    <input type="range" value="0" min="0" max="100">
+                </div>
+                <div class="task types">
+                    <label><input type="checkbox" checked>Bug fix</label>
+                    <label><input type="checkbox">Feature</label>
+                    <label><input type="checkbox">Enhancement</label>
+                </div>
+                <div class="status">
+                    <label><input type="radio" name="status" checked>Pending</label>
+                    <label><input type="radio" name="status" >In progress</label>
+                    <label><input type="radio" name="status"> Completed</label>
+                </div>
+
+                
+            </form>
+            
         </div>
-        <div class="sidebar content" id="sidebar menu">
-            <div class="section">
-                <h3>Taskmanager</h3>
-                <p>Organize your work and life,finally.</p>
-            </div>
-            <div class="section">
-                <h3>Features</h3>
-                <ul>
-                    <li>Task Management</li>
-                    <li>Team Collaboration</li><li>Analytics</li>
-                    <li>Integrations</li>
-                </ul>
-            </div>
-            <div class="section">
-                <h3>Resoutces</h3>
-                <ul>
-                    <li>Documentation</li>
-                    <li>Tutorials</li>
-                    <li>API References</li>
-                    <li>Support</li>
-                </ul>
-            </div>
-            <div class="section">
-                <h3>Company</h3>
-                <ul>
-                    <li>About us</li>
-                    <li>Careers</li>
-                    <li>Privacy Policy</li>
-                    <li>Terms of service</li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <script>
-        function toggle menu(){
-            const menu=document.getElementById("sidebar menu");
-            menu.classList.toggle("open");
-        }
-    </script>
+    </section>
     
 </body>
 </html>
